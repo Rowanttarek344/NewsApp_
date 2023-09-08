@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/home/category/category_item.dart';
+import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../models/category.dart';
+import '../../Providers/AppConfigProvider.dart';
+
 
 class categories_screen extends StatelessWidget {
   Function onCategoryClicked;
@@ -10,6 +14,8 @@ class categories_screen extends StatelessWidget {
   List<category> categories = category.getCategories();
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<AppConfigProvider>(context);
+
     return Padding(
       padding: const EdgeInsets.all(22.0),
       child: Container(
@@ -18,7 +24,7 @@ class categories_screen extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  'Pick your category \n of interest',
+                  AppLocalizations.of(context)!.pick_cat,
                   style: Theme.of(context).textTheme.headline3,
                 ),
               ],

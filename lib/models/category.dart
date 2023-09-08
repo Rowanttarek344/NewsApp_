@@ -1,13 +1,15 @@
 import 'dart:ui';
 
 import 'package:news_app/MyTheme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class category {
   String id;
   String title;
   Color color;
   String image_path;
-  
+
   category({required this.id,required this.title,required this.color,required this.image_path});
 
 

@@ -43,4 +43,21 @@ class ApiManager {
       throw e;
     }
   }
+
+  static Future<NewsResponse>queryArticle(String q) async{
+    var url=Uri.https(base_url,"/v2/everything",{
+      'q':q,
+      'apiKey':'d7256ea14bb64de596b18f0bd3ddc38e',
+    });
+    try{
+      var response= await http.get(url);
+      var bodystring=response.body;
+      var json=jsonDecode(bodystring);
+      var res= NewsResponse.fromJson(json);
+      return res;
+    }
+    catch(e){
+      throw e;
+    }
+  }
 }

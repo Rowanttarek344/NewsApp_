@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/MyTheme.dart';
+import 'package:news_app/home/news_details_page.dart';
 import 'package:news_app/models/NewsResponse.dart';
 
 class news_item extends StatelessWidget {
@@ -10,8 +11,10 @@ class news_item extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
-
+      onTap: () {
+        Navigator.of(context).pushNamed(news_details_page.routeName,
+            arguments:news_details_args(article: article)
+        );
       },
       child: Container(
         margin: EdgeInsets.all( 10),
@@ -38,7 +41,7 @@ class news_item extends StatelessWidget {
             SizedBox(height: 8,),
 
             Text(
-              article.content ?? '',
+              article.description ?? '',
               style: Theme.of(context).textTheme.subtitle2,
             ),
             SizedBox(height: 8,),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/MyTheme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class home_drawer extends StatelessWidget {
   Function onDrawerItemClicked;
@@ -20,7 +21,7 @@ class home_drawer extends StatelessWidget {
             ),
             padding: EdgeInsets.all(MediaQuery.of(context).size.height * .075),
             child: Text(
-              "News App!",
+              AppLocalizations.of(context)!.news_app,
               style: Theme.of(context).textTheme.headline1,
               textAlign: TextAlign.center,
             ),
@@ -39,7 +40,7 @@ class home_drawer extends StatelessWidget {
                     children: [
                       Icon(Icons.list),
                       SizedBox(width: 10,),
-                      Text('Categories',style: Theme.of(context).textTheme.headline2,)
+                      Text(AppLocalizations.of(context)!.categories,style: Theme.of(context).textTheme.headline2,)
                     ],
                   ),
                 ),
@@ -52,7 +53,7 @@ class home_drawer extends StatelessWidget {
                     children: [
                       Icon(Icons.settings),
                       SizedBox(width: 10,),
-                      Text('Settings',style: Theme.of(context).textTheme.headline2,)
+                      Text(AppLocalizations.of(context)!.settings,style: Theme.of(context).textTheme.headline2,)
                     ],
                   ),
                 ),
