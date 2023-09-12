@@ -27,10 +27,12 @@ class ApiManager {
     }
   }
 
-   static Future<NewsResponse>getNews(String source) async{
+   static Future<NewsResponse>getNews(String source,int? page) async{
     var url=Uri.https(base_url,"/v2/everything",{
       'sources':source,
       'apiKey':'d7256ea14bb64de596b18f0bd3ddc38e',
+      'page':'$page',
+      'pageSize':'20'
     });
     try{
       var response= await http.get(url);

@@ -1,0 +1,16 @@
+{
+  "news_app": "تطبيق الاخبار",
+  "pick_cat": "اختر الفئة التي تهمك",
+  "business": "التجارة",
+  "entertainment": "الترفيه",
+  "general": "عام",
+  "health": "الصحة",
+  "science": "العلوم",
+  "sports":"الرياضة",
+  "tech": "التكنولوجيا",
+  "categories": "الفئات",
+  "settings": "الاعدادات",
+  "language": "اللغة",
+  "english": "الانجليزية",
+  "arabic": "العربية"
+}
